@@ -1,4 +1,4 @@
-1-na primeira tela clique no primeiro botão (o mais acima)
+1-na primeira tela clique no botão "show em explorer"
 
 2-depois que ele abrir a pasta com os arquivos no seu PC abra o arquivo a ser editado
 
@@ -8,6 +8,8 @@
 
 5-Adicione a descrição que desejar para suas notificações e clique em "commit to master"
 
-6-clique em "fetch origin" para atualizar a nuvem (demora um pouco pra aparecer no browser mas funciona)
+6-clique em "fetch origin" para atualizar a sua nuvem individual
+
+7- Depois clique em "puch origin" no mesmo lugar de "fetch origin" ou no botão azul próximo de "show in explorer" para carregar o arquivo para o repository de origem (demora um pouco pra aparecer no browser mas funciona)
 
 Obs.: "clone" compartilha os arquivos para o seu GitHub desktop e as atualizações sempre vão para o repository de origem
