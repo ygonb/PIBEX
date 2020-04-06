@@ -1,4 +1,4 @@
-# Writing all output to: C:\Users\laysl\Documents\GitHub\PIBEX\Circuito El??trico\CIRCUITO INICIAL PCB.log
+# Writing all output to: C:\Users\Pedro\Documents\GitHub\PIBEX\Circuito El??trico\CIRCUITO INICIAL PCB.log
 set pad_wire_necking on
 bus diagonal
 fanout 5

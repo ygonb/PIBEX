@@ -5,6 +5,7 @@
   <WINDOW type="default" module="STARTUP"/>
   <WINDOW type="default" module="ISIS"/>
   <WINDOW type="default" module="DXP"/>
+  <WINDOW type="default" module="VSMDEBUG"/>
  </FRAME>
  <MODULE name="VSMDEBUG">
   <PWI>
