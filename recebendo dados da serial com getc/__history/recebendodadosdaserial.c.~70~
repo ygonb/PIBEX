@@ -6,7 +6,7 @@ void main()
    
    while(TRUE)
    {
-      if (!input(pin_a2)){ 
+      if (!input(pin_a2)){ //é verdadeiro se tem alguma inf na porta serial
                    delay_us(150);
                    output_high(pin_a4);
                    if (input(pin_a2)){caracter=1;}
@@ -41,6 +41,7 @@ void main()
                    else{caracter=caracter;}
                    
                    printf("%c",caracter);
+                   
                    
                     } ;
    }
