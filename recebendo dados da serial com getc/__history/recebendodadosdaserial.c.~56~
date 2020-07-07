@@ -1,0 +1,24 @@
+#include <recebendodadosdaserial.h>
+char caracter;
+
+void main()
+{
+   
+   while(TRUE)
+   {
+      if (!input(pin_a2)){ //é verdadeiro se tem alguma inf na porta serial
+                   caracter=fgetc(PORT1);//pega o caractere da serial
+                   delay_ms(10);
+                   printf(caracter);
+                   delay_ms(10);
+                   printf("a");
+                    
+                    //if (caracter=="a"){ output_high(pin_a4);}
+                    //if (caracter=="b"){output_low(pin_a4);}
+                    output_high(pin_a4);
+                    delay_ms(100);
+                    output_low(pin_a4);
+                    } ;
+   }
+
+}

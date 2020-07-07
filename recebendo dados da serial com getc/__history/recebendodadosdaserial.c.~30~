@@ -1,0 +1,21 @@
+#include <recebendodadosdaserial.h>
+char caracter;
+
+void main()
+{
+   
+   while(TRUE)
+   {
+      if ("a" == "a"){ //é verdadeiro se tem alguma inf na porta serial
+                   caracter=getc();//pega o caractere da serial
+                    //printf(caracter);
+                    
+                    //if (caracter=="a"){ output_high(pin_a4);}
+                    //if (caracter=="b"){output_low(pin_a4);}
+                    output_high(pin_a4);
+                   } else {output_low(pin_a4);};
+   
+   delay_ms (100);
+   }
+
+}

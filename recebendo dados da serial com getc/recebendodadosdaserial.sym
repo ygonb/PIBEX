@@ -5,27 +5,25 @@
 021     _RETURN_
 022     @SCRATCH
 023     @SCRATCH
-024     informacao
-025     @GETCH_1_.@SCRATCH1
+024     caracter
+025     @PUTCHAR_1_.P1
 09B-09C @READ_PROGRAM_MEMORY8.P1
 
 ROM Allocation:
-00000A  @const527.call
-00000C  @const528.call
-00000E  @GETCH_1_
-000033  main
-000033  @cinit1
-000043  @cinit2
+00000A  @PUTCHAR_1_
+00002C  @cinit1
+00002C  main
+00003C  @cinit2
 
 Project Directory:
-    C:\Users\Pedro\Desktop\faculdade\6 período\microcontroladores\recebendo dados da serial com getc\
+    D:\OneDrive\Documents\GitHub\PIBEX\recebendo dados da serial com getc\
 
 Project Files:
-    recebendodadosdaserial.c                                [02-jul-20 12:36  CRC=DD2D4B67]
-    recebendodadosdaserial.h                                [02-jul-20 11:25  CRC=CF12E969]
-    ..\..\..\..\..\..\..\Program Files (x86)\PICC\Devices\12F675.h [03-jul-13 14:28  CRC=0A49C2E3]
+    recebendodadosdaserial.c                                [07-jul-20 18:06  CRC=DEB847C6]
+    recebendodadosdaserial.h                                [07-jul-20 18:00  CRC=7DFCA5F0]
+    C:\Program Files (x86)\PICC\Devices\12F675.h            [03-jul-13 14:28  CRC=0A49C2E3]
 
-Source signature=C0D3BA96
+Source signature=7148737C
 
 Units:
     recebendodadosdaserial (main)

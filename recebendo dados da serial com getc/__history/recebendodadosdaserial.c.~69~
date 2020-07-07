@@ -3,7 +3,7 @@ int caracter;
 
 void main()
 {
-   
+   set_tris_A(0b11101110);
    while(TRUE)
    {
       if (!input(pin_a2)){ //é verdadeiro se tem alguma inf na porta serial

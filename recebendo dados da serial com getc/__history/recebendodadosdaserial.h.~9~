@@ -7,5 +7,5 @@
 #FUSES INTRC_IO         // Oscilador interno com pinos de IO disponíveis
 
 #use delay(internal=4MHz)
-#use rs232(baud=9600,parity=N,xmit=PIN_A0,rcv=PIN_A2,bits=8,stream=PORT1)
+#use rs232(baud=1200,parity=N,xmit=PIN_A0,rcv=PIN_A2,bits=8,stream=PORT1)
 
