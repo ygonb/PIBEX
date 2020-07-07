@@ -1,0 +1,51 @@
+004-005 @READ_PROGRAM_MEMORY8.P1
+019.6   C1OUT
+020     @SCRATCH
+021     @SCRATCH
+021     _RETURN_
+022     @SCRATCH
+023     @SCRATCH
+024     informacao
+025     @GETCH_1_.@SCRATCH1
+09B-09C @READ_PROGRAM_MEMORY8.P1
+
+ROM Allocation:
+00000A  @const527.call
+00000C  @const528.call
+00000E  @GETCH_1_
+000033  main
+000033  @cinit1
+000043  @cinit2
+
+Project Directory:
+    C:\Users\Pedro\Desktop\faculdade\6 período\microcontroladores\recebendo dados da serial com getc\
+
+Project Files:
+    recebendodadosdaserial.c                                [02-jul-20 12:36  CRC=DD2D4B67]
+    recebendodadosdaserial.h                                [02-jul-20 11:25  CRC=CF12E969]
+    ..\..\..\..\..\..\..\Program Files (x86)\PICC\Devices\12F675.h [03-jul-13 14:28  CRC=0A49C2E3]
+
+Source signature=C0D3BA96
+
+Units:
+    recebendodadosdaserial (main)
+
+Compiler Settings:
+    Processor:      PIC12F675
+    Pointer Size:   8
+    ADC Range:      0-65535
+    Opt Level:      9
+    Short,Int,Long: UNSIGNED: 1,8,16
+    Float,Double:   32,32
+
+Output Files:
+    XREF file:   recebendodadosdaserial.xsym
+    Errors:      recebendodadosdaserial.err
+    Ext Symbols: recebendodadosdaserial.esym
+    INHX8:       recebendodadosdaserial.hex
+    Symbols:     recebendodadosdaserial.sym
+    List:        recebendodadosdaserial.lst
+    Debug/COFF:  recebendodadosdaserial.cof
+    Project:     recebendodadosdaserial.ccspjt
+    Call Tree:   recebendodadosdaserial.tre
+    Statistics:  recebendodadosdaserial.STA

@@ -1,0 +1,146 @@
+CCS PCM C Compiler, Version 5.008, 5967               02-jul-20 12:36
+
+               Filename:   C:\Users\Pedro\Desktop\faculdade\6 período\microcontroladores\recebendo dados da serial com getc\recebendodadosdaserial.lst
+
+               ROM used:   100 words (10%)
+                           Largest free fragment is 924
+               RAM used:   5 (8%) at main() level
+                           6 (9%) worst case
+               Stack used: 1 locations
+               Stack size: 8
+
+*
+0000:  MOVLW  00
+0001:  MOVWF  0A
+0002:  GOTO   004
+0003:  NOP
+0004:  CALL   3FF
+0005:  BSF    03.5
+0006:  MOVWF  10
+0007:  MOVLW  00
+0008:  MOVWF  0A
+0009:  GOTO   033
+.................... #include <recebendodadosdaserial.h> 
+.................... #include <12F675.h> 
+.................... //////// Standard Header file for the PIC12F675 device //////////////// 
+.................... #device PIC12F675 
+000A:  RETLW  62
+000B:  RETLW  00
+000C:  RETLW  61
+000D:  RETLW  00
+....................  
+.................... #list 
+....................  
+.................... #device ADC=16 
+....................  
+.................... #FUSES NOWDT                 	//No Watch Dog Timer 
+.................... #FUSES NOMCLR                	//Master Clear pin used for I/O 
+.................... #FUSES NOBROWNOUT            	//No brownout reset 
+....................  
+.................... #use delay(internal=4MHz) 
+.................... #use rs232(baud=9600,parity=N,xmit=PIN_A0,rcv=PIN_A2,bits=8,stream=PORT1) 
+000E:  BSF    03.5
+000F:  BSF    05.2
+0010:  BCF    03.5
+0011:  BTFSC  05.2
+0012:  GOTO   011
+0013:  MOVLW  08
+0014:  MOVWF  20
+0015:  CLRF   25
+0016:  BSF    20.7
+0017:  GOTO   026
+0018:  BCF    20.7
+0019:  GOTO   026
+001A:  BCF    03.0
+001B:  BTFSC  05.2
+001C:  BSF    03.0
+001D:  RRF    25,F
+001E:  BSF    20.6
+001F:  GOTO   026
+0020:  BCF    20.6
+0021:  DECFSZ 20,F
+0022:  GOTO   01A
+0023:  MOVF   25,W
+0024:  MOVWF  21
+0025:  GOTO   032
+0026:  MOVLW  1C
+0027:  BTFSC  20.7
+0028:  MOVLW  07
+0029:  MOVWF  21
+002A:  DECFSZ 21,F
+002B:  GOTO   02A
+002C:  NOP
+002D:  BTFSC  20.7
+002E:  GOTO   018
+002F:  BTFSC  20.6
+0030:  GOTO   020
+0031:  GOTO   01A
+0032:  GOTO   046 (RETURN)
+....................  
+....................  
+.................... char informacao; 
+.................... void main() 
+0033:  MOVF   03,W
+0034:  ANDLW  1F
+0035:  MOVWF  03
+0036:  BSF    03.5
+0037:  BCF    05.0
+0038:  BCF    03.5
+0039:  BSF    05.0
+003A:  BCF    1F.6
+003B:  BSF    03.5
+003C:  BCF    1F.0
+003D:  BCF    1F.1
+003E:  BCF    1F.2
+003F:  BCF    1F.3
+0040:  MOVLW  07
+0041:  BCF    03.5
+0042:  MOVWF  19
+.................... { 
+....................  
+....................    while(TRUE) 
+....................    { 
+....................       if (kbhit()){ //é verdadeiro se tem alguma inf na porta serial 
+0043:  BTFSC  05.2
+0044:  GOTO   062
+....................                    informacao=getc();//pega o caractere da serial   
+0045:  GOTO   00E
+0046:  MOVF   21,W
+0047:  MOVWF  24
+....................                     if (informacao=="b"){ output_high(pin_a3);} 
+0048:  MOVLW  00
+0049:  MOVWF  23
+004A:  MOVLW  0A
+004B:  SUBWF  24,W
+004C:  BTFSS  03.2
+004D:  GOTO   055
+004E:  MOVF   23,F
+004F:  BTFSS  03.2
+0050:  GOTO   055
+0051:  BSF    03.5
+0052:  BCF    05.3
+0053:  BCF    03.5
+0054:  BSF    05.3
+....................                     if (informacao=="a"){ output_low(pin_a3);}  
+0055:  MOVLW  00
+0056:  MOVWF  23
+0057:  MOVLW  0C
+0058:  SUBWF  24,W
+0059:  BTFSS  03.2
+005A:  GOTO   062
+005B:  MOVF   23,F
+005C:  BTFSS  03.2
+005D:  GOTO   062
+005E:  BSF    03.5
+005F:  BCF    05.3
+0060:  BCF    03.5
+0061:  BCF    05.3
+....................                    }      
+0062:  GOTO   043
+....................    } 
+....................  
+.................... } 
+0063:  SLEEP
+
+Configuration Fuses:
+   Word  1: 3F84   INTRC_IO NOWDT PUT NOMCLR NOBROWNOUT NOPROTECT NOCPD

@@ -1,0 +1,15 @@
+#include <recebendodadosdaserial.h>
+char informacao;
+void main()
+{
+
+   while(TRUE)
+   {
+      if (kbhit()){ //é verdadeiro se tem alguma inf na porta serial
+                   informacao=getc();//pega o caractere da serial  
+                    if (informacao=="oi"){ output_high(pin_a3);}
+                    if (informacao=="idiota"){ output_low(pin_a3);} 
+                   }     
+   }
+
+}

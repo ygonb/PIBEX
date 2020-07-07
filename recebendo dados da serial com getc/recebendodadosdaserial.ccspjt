@@ -1,0 +1,22 @@
+[PROJECT]
+Target=recebendodadosdaserial.hex
+Processor_Text=PIC12F675
+CCSVerions=5.008
+Compiler=PCM
+CCSVersion=5.008
+[Target Data]
+FileList=recebendodadosdaserial.c
+[Directories]
+Include=C:\Program Files (x86)\PICC\Devices\;C:\Program Files (x86)\PICC\Drivers\;C:\Users\Pedro\Desktop\faculdade\6 período\microcontroladores\recebendo dados da serial com getc\
+[C:\Users\Pedro\Desktop\faculdade\6 período\microcontroladores\recebendo dados da serial com getc\recebendodadosdaserial]
+Type=4
+[mru-list]
+1=recebendodadosdaserial.c
+[Opened Files]
+1=recebendodadosdaserial.c
+2=
+[recebendodadosdaserial.c]
+Type=4
+[Units]
+Count=1
+1=recebendodadosdaserial (main)
