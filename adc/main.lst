@@ -1,6 +1,6 @@
-CCS PCM C Compiler, Version 5.008, 5967               02-jul-20 21:38
+CCS PCM C Compiler, Version 5.008, 5967               09-jul-20 16:02
 
-               Filename:   C:\Users\Pedro\Desktop\faculdade\6 período\microcontroladores\adc\main.lst
+               Filename:   C:\Users\ygo\Documents\GitHub\PIBEX\adc\main.lst
 
                ROM used:   100 words (10%)
                            Largest free fragment is 924
@@ -27,8 +27,8 @@ CCS PCM C Compiler, Version 5.008, 5967               02-jul-20 21:38
 ....................  
 .................... #list 
 ....................  
-.................... #device ADC=10 
 ....................  
+.................... #device ADC=10 
 .................... #FUSES INTRC_IO,MCLR,PUT, NOWDT 
 ....................  
 .................... #use delay(internal=4MHz) 
@@ -52,6 +52,7 @@ CCS PCM C Compiler, Version 5.008, 5967               02-jul-20 21:38
 001B:  DECFSZ 00,F
 001C:  GOTO   00F
 001D:  GOTO   062 (RETURN)
+....................  
 ....................  
 ....................  
 .................... int16 analogico; 

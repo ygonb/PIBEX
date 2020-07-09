@@ -13,11 +13,11 @@ Stack size: 8
 
 Lines Stmts  %   Files
 ----- ----- ---  -----
-   19    13 100  main.c
+   20    13 100  main.c
     8     0   0  main.h
-  487     0   0  ..\..\..\..\..\..\..\Program Files (x86)\PICC\Devices\12F675.h
+  487     0   0  ..\..\..\..\..\..\Program Files (x86)\PICC\Devices\12F675.h
 ----- -----
-  514    13 Total
+  515    13 Total
 
 Page ROM  %  RAM   Vol Diff  Functions:
 ---- --- --- ---   --- ----  ----------

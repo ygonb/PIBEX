@@ -16,14 +16,14 @@ ROM Allocation:
 00002A  @cinit2
 
 Project Directory:
-    C:\Users\Pedro\Desktop\faculdade\6 período\microcontroladores\adc\
+    C:\Users\ygo\Documents\GitHub\PIBEX\adc\
 
 Project Files:
-    main.c                                                  [02-jul-20 14:13  CRC=A767FE3F]
-    main.h                                                  [02-jul-20 21:38  CRC=00000000]
-    ..\..\..\..\..\..\..\Program Files (x86)\PICC\Devices\12F675.h [03-jul-13 14:28  CRC=0A49C2E3]
+    main.c                                                  [09-jul-20 16:02  CRC=7F32F8C3]
+    main.h                                                  [09-jul-20 16:02  CRC=00000000]
+    ..\..\..\..\..\..\Program Files (x86)\PICC\Devices\12F675.h [03-jul-13 14:28  CRC=0A49C2E3]
 
-Source signature=BBFB8405
+Source signature=93C67E89
 
 Units:
     main (main)

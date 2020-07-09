@@ -1,7 +1,7 @@
-D G "__PCM__" 0 20 ""5.008""
-D G "__DEVICE__" 0 20 "675"
-D G "__DATE__" 0 20 ""02-jul-20""
-D G "__TIME__" 0 20 ""21:38:37"" "Standard Header file for the PIC12F675 device ////////////////"
+D G "__PCM__" 0 22 ""5.008""
+D G "__DEVICE__" 0 22 "675"
+D G "__DATE__" 0 22 ""09-jul-20""
+D G "__TIME__" 0 22 ""16:02:32"" "Standard Header file for the PIC12F675 device ////////////////"
 c L "set_tris_a" 2 5 13 "FUNCTION"
 v L "value" 2 28 "int8" `53 
 f B "set_tris_a" 2 28 "void(int8 value)" `52 
@@ -592,10 +592,10 @@ d G "INT_RA2" 2 481 "0x0040B08"
 d G "INT_RA3" 2 482 "0x0080B08"
 d G "INT_RA4" 2 483 "0x0100B08"
 d G "INT_RA5" 2 484 "0x0200B08"
-V G "analogico" 0 2 "int16" `518 
-F G "main" 0 4 "void()" `519 
-C L "main" 0 10 1 "FUNCTION"
-C L "main" 0 10 1 "FUNCTION"
+V G "analogico" 0 3 "int16" `518 
+F G "main" 0 5 "void()" `519 
+C L "main" 0 11 1 "FUNCTION"
+C L "main" 0 11 1 "FUNCTION"
 F B "reset_cpu" 0 0
 F B "abs" 1 0
 F B "sleep" 0 0
