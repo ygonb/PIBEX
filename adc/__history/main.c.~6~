@@ -1,0 +1,18 @@
+#include <main.h>
+int16 analogico;
+void main()
+{
+   setup_adc_ports(sAN0);
+   setup_adc(ADC_CLOCK_INTERNAL);
+
+   while(TRUE)
+   {
+     set_adc_channel(0);// seleciona qual entrada analógica será lida
+     delay_us(10);
+     analogico= read_adc();// variável= valor da entrada analógica
+     if (analogico>512){output_high(pin_a5);} 
+     else { output_low(pin_a5);}
+     delay_ms(50);
+   }
+
+}

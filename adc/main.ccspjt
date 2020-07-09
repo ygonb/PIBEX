@@ -1,0 +1,23 @@
+[PROJECT]
+Target=main.hex
+Processor_Text=PIC12F675
+CCSVerions=5.008
+Compiler=PCM
+CCSVersion=5.008
+[Target Data]
+FileList=main.c
+[Directories]
+Include=C:\Program Files (x86)\PICC\Devices\;C:\Program Files (x86)\PICC\Drivers\;C:\Users\Pedro\Desktop\faculdade\6 período\microcontroladores\adc\
+[C:\Users\Pedro\Desktop\faculdade\6 período\microcontroladores\adc\main]
+Type=4
+[mru-list]
+1=main.c
+[Opened Files]
+1=..\recebendo dados da serial com getc\recebendodadosdaserial.c
+2=main.h
+3=
+[main.c]
+Type=4
+[Units]
+Count=1
+1=main (main)

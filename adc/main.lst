@@ -1,0 +1,146 @@
+CCS PCM C Compiler, Version 5.008, 5967               02-jul-20 21:38
+
+               Filename:   C:\Users\Pedro\Desktop\faculdade\6 período\microcontroladores\adc\main.lst
+
+               ROM used:   100 words (10%)
+                           Largest free fragment is 924
+               RAM used:   6 (9%) at main() level
+                           7 (11%) worst case
+               Stack used: 1 locations
+               Stack size: 8
+
+*
+0000:  MOVLW  00
+0001:  MOVWF  0A
+0002:  GOTO   004
+0003:  NOP
+0004:  CALL   3FF
+0005:  BSF    03.5
+0006:  MOVWF  10
+0007:  MOVLW  00
+0008:  MOVWF  0A
+0009:  GOTO   01E
+.................... #include <main.h> 
+.................... #include <12F675.h> 
+.................... //////// Standard Header file for the PIC12F675 device //////////////// 
+.................... #device PIC12F675 
+....................  
+.................... #list 
+....................  
+.................... #device ADC=10 
+....................  
+.................... #FUSES INTRC_IO,MCLR,PUT, NOWDT 
+....................  
+.................... #use delay(internal=4MHz) 
+000A:  MOVLW  26
+000B:  MOVWF  04
+000C:  MOVF   00,W
+000D:  BTFSC  03.2
+000E:  GOTO   01D
+000F:  MOVLW  01
+0010:  MOVWF  21
+0011:  CLRF   20
+0012:  DECFSZ 20,F
+0013:  GOTO   012
+0014:  DECFSZ 21,F
+0015:  GOTO   011
+0016:  MOVLW  4A
+0017:  MOVWF  20
+0018:  DECFSZ 20,F
+0019:  GOTO   018
+001A:  GOTO   01B
+001B:  DECFSZ 00,F
+001C:  GOTO   00F
+001D:  GOTO   062 (RETURN)
+....................  
+....................  
+.................... int16 analogico; 
+.................... void main() 
+001E:  MOVF   03,W
+001F:  ANDLW  1F
+0020:  MOVWF  03
+0021:  BCF    1F.6
+0022:  BSF    03.5
+0023:  BCF    1F.0
+0024:  BCF    1F.1
+0025:  BCF    1F.2
+0026:  BCF    1F.3
+0027:  MOVLW  07
+0028:  BCF    03.5
+0029:  MOVWF  19
+.................... { 
+....................    setup_adc_ports(sAN0); 
+002A:  BCF    1F.6
+002B:  BSF    03.5
+002C:  BSF    1F.0
+002D:  BCF    1F.1
+002E:  BCF    1F.2
+002F:  BCF    1F.3
+....................    setup_adc(ADC_CLOCK_INTERNAL); 
+0030:  BSF    1F.4
+0031:  BSF    1F.5
+0032:  BCF    1F.6
+0033:  BCF    03.5
+0034:  BSF    1F.7
+0035:  BSF    1F.0
+....................  
+....................    while(TRUE) 
+....................    { 
+....................      set_adc_channel(0);// seleciona qual entrada analógica será lida 
+0036:  MOVLW  00
+0037:  MOVWF  21
+0038:  MOVF   1F,W
+0039:  ANDLW  F3
+003A:  IORWF  21,W
+003B:  MOVWF  1F
+....................      delay_us(10); 
+003C:  MOVLW  02
+003D:  MOVWF  20
+003E:  DECFSZ 20,F
+003F:  GOTO   03E
+0040:  GOTO   041
+0041:  NOP
+....................      analogico= read_adc();// variável= valor da entrada analógica 
+0042:  BSF    1F.1
+0043:  BTFSC  1F.1
+0044:  GOTO   043
+0045:  BSF    03.5
+0046:  MOVF   1E,W
+0047:  BCF    03.5
+0048:  MOVWF  24
+0049:  MOVF   1E,W
+004A:  MOVWF  25
+....................      if (analogico>800){output_high(pin_a5);}  
+004B:  MOVF   25,W
+004C:  SUBLW  02
+004D:  BTFSC  03.0
+004E:  GOTO   05B
+004F:  XORLW  FF
+0050:  BTFSS  03.2
+0051:  GOTO   056
+0052:  MOVF   24,W
+0053:  SUBLW  20
+0054:  BTFSC  03.0
+0055:  GOTO   05B
+0056:  BSF    03.5
+0057:  BCF    05.5
+0058:  BCF    03.5
+0059:  BSF    05.5
+005A:  GOTO   05F
+....................      else { output_low(pin_a5);} 
+005B:  BSF    03.5
+005C:  BCF    05.5
+005D:  BCF    03.5
+005E:  BCF    05.5
+....................      delay_ms(50); 
+005F:  MOVLW  32
+0060:  MOVWF  26
+0061:  GOTO   00A
+0062:  GOTO   036
+....................    } 
+....................  
+.................... } 
+0063:  SLEEP
+
+Configuration Fuses:
+   Word  1: 3FE4   INTRC_IO NOWDT PUT MCLR BROWNOUT NOPROTECT NOCPD
