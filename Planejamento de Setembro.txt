@@ -1,0 +1,5 @@
+15/09: Ler datasheet do sensor ultrassônico
+18/09: Rascunho do circuito e Montagem no proteus (sem reunião)
+22/09: Fazer PCB nova
+25/09:
+02/10:
