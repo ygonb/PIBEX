@@ -1,0 +1,3 @@
+trig > gp0
+echo > gp1
+hall > gp2?
